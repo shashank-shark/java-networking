@@ -99,3 +99,55 @@ long skip (long n);
 
 ----------------------------------------------------------------------------------------------------
 
+
+==================================== Methods of OutputStream ========================================
+void close();
+
+void flush ();
+
+void write (int c);
+
+void write (byte[] b);
+
+void write (byte[] b, int offset, int n)
+
+-----------------------------------------------------------------------------------------------------
+
+
+
+
+==================================== Constructor of class FileOutputStream ================================
+
+FileOutputStream (File file)
+
+FileOutputStream (FileDescriptor fDobj)
+
+FileOutputStream (File file, boolean append)
+
+FileOutputStream (String name)
+
+FileOutputStream (String name, boolean append)
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+==================================== Methods of class FileOutputStream ==================================
+
+void close()
+
+protected void finalize()
+
+FileChannel getChennael ()
+
+FileDescriptor getFD ()
+
+void write (byte[] bray)
+
+void write (byte[] bray, int offset, int lenght)
+
+void write (int bytes)
+
+
+-----------------------------------------------------------------------------------------------------------
+
