@@ -1,0 +1,14 @@
+Lambda expression is  an anonymous method without a formal declaration using to implement a single method interface.
+
+
+	---------------------------------------------------------------------------------------------------
+	===			Standard functional interfaces and their methods			===
+	---------------------------------------------------------------------------------------------------
+
+	(1)	public interface Consumer < T > { void accept (T t); }
+	(2)	public interface Function < T, R > { R apply (T,t); }
+	(3)	public interface Supplier < T > { T get(); }
+	(4)	public interface BinaryOperation < T > { T apply (T left, T right); }
+	(5)	interface Predicate < T > { boolean test (T,x); }
+
+	---------------------------------------------------------------------------------------------------
