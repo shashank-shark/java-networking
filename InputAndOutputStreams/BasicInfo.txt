@@ -1,0 +1,101 @@
+FileInputStream will convey data from the file into the program , whereas FileOutputStream will deposit 
+data from the the program to the file.
+
+
+All input stream classes support entry of data into the program and all output stream classes support 
+transfer of data from the program to the destination.
+
+ByteStreams =  use machine formatted data (i.e. Binary)
+
+CharacterStreams = human readable data, which is in the form of characters
+
+Base abstract classes are:
+-> InputStream
+-> OutputStream 
+-> Reader
+-> Writer
+
+
+InputStream and OutputStream and their subclasses are used for binary I/O;
+
+Reader and Writer and their sublasses are used for character I/O in character form;
+
+---------------StandardStreams------------------
+System.in is an Object of type InputStream
+System.out is an Object of type PrintStream
+System.err is an Object of type PrintStream
+------------------------------------------------
+
+
+============================================================================================================
+						Basic I/O stream classes and file classes of Java
+============================================================================================================
+File - The file object represents a pathname to a file or to a directory
+
+InputStream - It is an abstract base class for byte input operation
+
+OutputStream - It is an abstract base class for byte output operation
+
+Reader - It is a abstract base class for character stream input operation
+
+Writer - It is a abstract base class for character stream output operation
+
+RandomAccessFile - This class supports random access to a file's content
+
+____________________________________________________________________________________________________________
+
+								========== CLASS FILES ===========
+
+The class File is declared as 
+
+	public class File extends Object implements serializable, comparable <File>
+
+
+--------------------------------------- Constructors of class File ----------------------------------------
+File (String pathname)
+File (File parent, String child)
+File (String parent, String child)
+File (URL url)
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+==============================			FileInputStream		===========================================
+	
+					public class FileInputStream extends InputStream
+---------------------------------------------
+====	Constructors of FileInputStream	  ==|
+---------------------------------------------
+|											|
+| FileInputStream (File file)				|
+|											|
+| FileInputStream (FileDescriptor fDobj)	|
+|											|
+| FileInputStream (String name)				|
+|											|
+---------------------------------------------
+
+
+===================================== Methods of FileInputStream ==================================
+
+int available ();
+
+void close();
+
+public void finalize();
+
+FileChannel getChennael();
+
+FileDescriptor getFD();
+
+int read();
+
+int read (byte[] bray);
+
+int read (byte[] bray, int off, int lenght);
+
+long skip (long n);
+
+----------------------------------------------------------------------------------------------------
+
