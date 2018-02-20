@@ -1,0 +1,47 @@
+---------------------------------------------------------------------------
+##################      Methods under class JFrame     ####################
+----------------------------------------------------------------------------
+                     ...................................
+                     .| Everything is added on JFrame |.
+                     ...................................
+-----------------------------------------------------------------------------
+
+void setContentPane (Container container)    
+
+Container getContentPane()
+
+void setGlassPane()
+
+void setLayeredPane()
+
+LayeredPane getLayeredPane()
+
+JRootPane createRootPane()              
+
+void setRootPane()                      
+
+JRootPane getRootPane()
+
+------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+##################      Methods of JPanel class     ####################
+----------------------------------------------------------------------------
+
+Icon getIcon()
+
+void setIcon()
+
+String getText()
+
+void setText()
+
+void setIconTextGap(int)
+
+int getIconTextGap ()
+
+void setDisplayedKeyAccelerator (char)
+
+char getDisplayedKeyAcceleratot ()
+
+------------------------------------------------------------------------------
