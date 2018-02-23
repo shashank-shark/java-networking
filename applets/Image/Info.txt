@@ -1,0 +1,8 @@
+For loading the image in AppletWindows
+
+        Image getImage(URL url);
+        Image getImage(URL url, String imageFileName);
+
+getDocumentBase() -> Returns URL of that contains the webpage having AppletWindows
+getCodebase() -> Returns URL of the folder in which the applet class is located
+
