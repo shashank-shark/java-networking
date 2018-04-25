@@ -6,6 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.net.*;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
 
 
 public class LocalPortScanner extends JFrame {
@@ -35,6 +39,7 @@ public class LocalPortScanner extends JFrame {
 
 		//pane with null layout
 		JPanel contentPane = new JPanel(null);
+		contentPane.setBorder(new EtchedBorder(EtchedBorder.RAISED, null, null));
 		contentPane.setPreferredSize(new Dimension(412,424));
 		contentPane.setBackground(Color.LIGHT_GRAY);
 
@@ -59,6 +64,16 @@ public class LocalPortScanner extends JFrame {
 		//Call defined methods
 
 		button2 = new JButton();
+		button2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textareainfo.setText("");
+				textareainfo.setText("Port  		Use");
+				
+				String info;
+				info = "1 ) TCP Port Service Multiplexer (TCPMUX)\n ";
+				textareainfo.append("\n"+info);
+			}
+		});
 		button2.setBounds(6,150,90,35);
 		button2.setBackground(new Color(214,217,223));
 		button2.setForeground(new Color(0,0,0));
@@ -68,6 +83,19 @@ public class LocalPortScanner extends JFrame {
 		button2.setVisible(true);
 
 		button3 = new JButton();
+		button3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textareainfo.setText(" ");
+				try
+		        {
+		            InetAddress myaddress = InetAddress.getLocalHost();
+		            textareainfo.setText(myaddress.toString());
+		        } catch (UnknownHostException e)
+		        {
+		            System.out.println("Address not known");
+		        }
+			}
+		});
 		button3.setBounds(9,200,90,35);
 		button3.setBackground(new Color(214,217,223));
 		button3.setForeground(new Color(0,0,0));
@@ -77,6 +105,22 @@ public class LocalPortScanner extends JFrame {
 		button3.setVisible(true);
 
 		button4 = new JButton();
+		button4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textareainfo.setText("");
+				textareainfo.setText("*****************************\n");
+				textareainfo.append("  Local Port Scanner in Java     \n");
+				textareainfo.append("*****************************\n");
+				textareainfo.append("\n");
+				textareainfo.append("  This Application shows \n  the ports that are open\n  on  your local system.");
+				textareainfo.append("\n");
+				textareainfo.append("\n");
+				textareainfo.append("\n");
+				textareainfo.append("*****************************\n");
+				textareainfo.append("  Developed by Shashank J\n");
+				textareainfo.append("*****************************\n");
+			}
+		});
 		button4.setBounds(8,250,90,35);
 		button4.setBackground(new Color(214,217,223));
 		button4.setForeground(new Color(0,0,0));
@@ -109,6 +153,9 @@ public class LocalPortScanner extends JFrame {
 		contentPane.add(scrollPane);
 		
 		textareainfo = new JTextArea();
+		textareainfo.setFont(new Font("Monospaced", Font.BOLD, 13));
+		textareainfo.setEditable(false);
+		textareainfo.setForeground(Color.BLACK);
 		scrollPane.setViewportView(textareainfo);
 		
 		JScrollBar scrollBar = new JScrollBar();
@@ -128,6 +175,7 @@ public class LocalPortScanner extends JFrame {
 	//Method actionPerformed for button1
 	private void StartScanning (ActionEvent evt) {
 			//TODO
+		textareainfo.setText(" ");
 		int port = 0;
 		while (port <= 65535) {
 			try {
